@@ -56,9 +56,9 @@ const Page = () => {
           </ServiceCard>
         </div>
       </section>
-      <section className="EventsContainer">
+      <section className="EventsContainer" data-testid="events">
         <h2 className="Title" id="nos-realisations">Nos réalisations</h2>
-        <EventList data-testid="events-list" />
+        <EventList  />
       </section>
       <section className="PeoplesContainer">
         <h2 className="Title" id="notre-equipe">Notre équipe</h2>
@@ -118,7 +118,7 @@ const Page = () => {
         </Modal>
       </div>
     </main>
-    <footer className="row" data-testid="footer">
+    <footer className="row" data-testid="Footer">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
           {latestEvent && (

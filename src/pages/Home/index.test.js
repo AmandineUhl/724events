@@ -27,18 +27,28 @@ describe("When Form is created", () => {
 
 });
 
+// Tests d'intégrations
 
 describe("When a page is created", () => {
-  it("a list of events is displayed", () => {
-    // to implement
+  beforeEach(() => {
+    render(<Home />);
+  });
+  it("a list of events is displayed",async () => {
+    const Container = screen.getByTestId("events");
+    expect(Container).toBeInTheDocument();
   })
-  it("a list a people is displayed", () => {
-    // to implement
+  it("a list a people is displayed", async () => {
+    const Container = screen.getByTestId("people-list");
+    expect(Container.childElementCount).toEqual(6);
   })
   it("a footer is displayed", () => {
-    // to implement
+    const Footer = screen.getByTestId("Footer");
+    expect(Footer).toBeInTheDocument();
+
   })
   it("an event card, with the last event, is displayed", () => {
-    // to implement
+    const Footer = screen.getByTestId("Footer");
+    const LastEvent = Footer.firstChild;
+    expect(LastEvent).toBeInTheDocument();
   })
 });
